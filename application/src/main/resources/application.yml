@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/order?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root  # 사용자 이름 (로그인 시 사용)
+    password: jjhh1231 # 사용자 암호 (로그인 시 사용)
+
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.format_sql: true
+      generate-ddl: true
+      show-sql: true
+
+  http:
+    log-request-details: true
+
+
+logging:
+  level:
+    org:
+      springframework:
+        web:reactive:function:client:ExchangeFunctions: TRACE

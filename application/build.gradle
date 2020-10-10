@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    compile project(":domains")
+    compile project(":EventHandler")
+    compile("org.springframework.boot:spring-boot-starter-web")
+}
+
+bootJar {
+    archivesBaseName = 'application'
+}
